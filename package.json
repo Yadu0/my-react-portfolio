@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "build": "npm install --legacy-peer-deps && vite build", 
 =======
 <<<<<<< HEAD
@@ -13,6 +14,9 @@
     "build": "npm install --legacy-peer-deps && next build",  <-- Added comma here
 >>>>>>> f369af8 (Fix syntax error in package.json)
 >>>>>>> 8edb58b (Your commit message)
+=======
+    "build": "npm install --legacy-peer-deps && next build", 
+>>>>>>> 2ccf437 (Resolved merge conflict in package.json)
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
