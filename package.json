@@ -4,19 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "build": "npm install --legacy-peer-deps && vite build", 
-=======
-<<<<<<< HEAD
-    "build": "npm install --legacy-peer-deps && next build", 
-=======
-    "build": "npm install --legacy-peer-deps && next build",  <-- Added comma here
->>>>>>> f369af8 (Fix syntax error in package.json)
->>>>>>> 8edb58b (Your commit message)
-=======
-    "build": "npm install --legacy-peer-deps && next build", 
->>>>>>> 2ccf437 (Resolved merge conflict in package.json)
+    "build": "npm install --legacy-peer-deps && vite build",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -47,7 +35,7 @@
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^6.28.0",
-    "react-swipeable-views": "^0.14.0",
+    "react-swipeable-views": "^0.12.15",
     "shadcn-ui": "^0.2.3",
     "spline": "^0.0.0",
     "styled-components": "^6.1.13",
