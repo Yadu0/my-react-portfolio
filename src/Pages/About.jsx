@@ -205,7 +205,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Eki Zulfar Rachman
+                Yadu Jain
               </span>
             </h2>
             
@@ -214,10 +214,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang
-              tertarik dalam pengembangan Front-End. Saya berfokus pada
-              menciptakan pengalaman digital yang menarik dan selalu berusaha
-              memberikan solusi terbaik dalam setiap proyek.
+              A Computer Network and Telecommunications Engineering student interested in Front-End development. I focus on creating engaging digital experiences and always strive to provide the best solutions in every project.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
