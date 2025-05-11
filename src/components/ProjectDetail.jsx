@@ -7,6 +7,35 @@ import {
 import Swal from 'sweetalert2';
 import React from 'react';
 import GitHubProjects from '../components/GitHubProjects';
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';  // Import necessary hooks
+
+const ProjectDetails = ({ projects }) => {
+  // Use useParams to get the project ID from the URL
+  const { id } = useParams();
+
+  // Find the project that matches the ID
+  const project = projects.find(p => p.id === parseInt(id)); // Match ID from URL
+
+  if (!project) {
+    return <h1>Project Not Found</h1>; // Handle case if project is not found
+  }
+
+  return (
+    <div className="project-details">
+      <h2>{project.name}</h2>  {/* Render the project name */}
+      
+      {/* Add other details like description, demo link, etc., if needed */}
+      <p>Details about the project will go here...</p>
+
+      {/* Optionally add a "back" button to navigate back */}
+      <button onClick={() => navigate('/')}>Go Back</button>
+    </div>
+  );
+};
+
+export default ProjectDetails;
+
 
 const Projects = () => {
   const demoProjects = [
