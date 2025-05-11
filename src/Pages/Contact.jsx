@@ -131,7 +131,7 @@ const ContactPage = () => {
             </div>
 
             {/* Updated Form */}
-            <form action="https://formsubmit.co/el/koyova" method="POST" onSubmit={handleSubmit}>
+            <form action="https://formsubmit.co/yadusinghai24@gmail.com" method="POST" onSubmit={handleSubmit}>
               <div
                 data-aos="fade-up"
                 data-aos-delay="100"
