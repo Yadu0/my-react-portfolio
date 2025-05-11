@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,10 @@ const Navbar = () => {
     { href: "#About", label: "About" },
     { href: "#Portofolio", label: "Portfolio" },
     { href: "#Contact", label: "Contact" },
-    { href: "/projects", label: "Projects" }, // Added the Projects page link
+  ];
+
+  const externalNavItems = [
+    { href: "/projects", label: "Projects" }, // This will be handled differently
   ];
 
   useEffect(() => {
@@ -119,6 +123,18 @@ const Navbar = () => {
                   />
                 </a>
               ))}
+
+              {/* Projects link handled differently with react-router Link */}
+              {externalNavItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-[#e2d3fd] hover:text-white transition-colors duration-300"
+                  onClick={() => setIsOpen(false)} // Close mobile menu after clicking
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -167,6 +183,18 @@ const Navbar = () => {
               >
                 {item.label}
               </a>
+            ))}
+            
+            {/* Mobile Projects link */}
+            {externalNavItems.map((item) => (
+              <Link
+                key={item.label}
+                to={item.href}
+                onClick={() => setIsOpen(false)} // Close menu after click
+                className="block px-4 py-3 text-lg font-medium text-[#e2d3fd] hover:text-white"
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
         </div>
