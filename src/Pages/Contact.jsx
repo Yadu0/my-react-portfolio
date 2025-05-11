@@ -130,7 +130,7 @@ const ContactPage = () => {
               <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
             </div>
 
-           <form action="https://formsubmit.co/yadusinghai24@gmail.com" method="POST">
+           <form action="https://formsubmit.co/el/koyova" method="POST">
      <input type="text" name="name" required>
      <input type="email" name="email" required>
      <button type="submit">Send</button>
