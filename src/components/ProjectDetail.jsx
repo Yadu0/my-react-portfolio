@@ -9,6 +9,28 @@ import React from 'react';
 import GitHubProjects from '../components/GitHubProjects';
 
 const Projects = () => {
+  const demoProjects = [
+  {
+      id: 1,
+      name: "Diseases Detection App on Xcode",
+      description:
+        "A project showcasing a Diseases Detection App developed using Xcode. It leverages machine learning for medical predictions.",
+    },
+    {
+      id: 2,
+      name: "Women Safety AI App",
+      description:
+        "An AI-powered Women Safety app designed to enhance personal safety through real-time alerts and location tracking.",
+    },
+    {
+      id: 3,
+      name: "Flutter Design",
+      description:
+        "A project demonstrating Flutter UI/UX design principles. It focuses on creating a responsive and modern interface.",
+    },
+  ];
+
+
   return (
     <section className="my-16 px-4 md:px-8">
       <h2 className="text-white text-3xl font-bold mb-6">My Projects</h2>
