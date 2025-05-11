@@ -47,11 +47,29 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
   );
 };
 // Assuming you define project data in your App.jsx or another appropriate file
-const projects = [
-  { id: 1, name: 'Diseases Detection App on Xcode' },
-  { id: 2, name: 'Women Safety AI App' },
-  { id: 3, name: 'Flutter Design' },
-];
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProjectDetails from './components/ProjectDetails'; // Import your ProjectDetails component
+
+const App = () => {
+  // Define the projects data
+  const projects = [
+    { id: 1, name: 'Diseases Detection App on Xcode' },
+    { id: 2, name: 'Women Safety AI App' },
+    { id: 3, name: 'Flutter Design' },
+  ];
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Other Routes */}
+        <Route path="/project/:id" element={<ProjectDetails projects={projects} />} />  {/* Pass projects array here */}
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
 
 const ProjectPageLayout = () => (
   <>
