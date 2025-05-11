@@ -5,6 +5,35 @@ import {
   ChevronRight, Layers, Layout, Globe, Package, Cpu, Code,
 } from "lucide-react";
 import Swal from 'sweetalert2';
+import React from 'react';
+import GitHubProjects from '../components/GitHubProjects';
+
+const Projects = () => {
+  return (
+    <section className="my-16 px-4 md:px-8">
+      <h2 className="text-white text-3xl font-bold mb-6">My Projects</h2>
+
+      {/* Your existing hard-coded project cards */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Example Project Card */}
+        <div className="bg-white/5 border border-white/10 p-4 rounded-xl">
+          <h3 className="text-white text-xl font-bold">Custom Project</h3>
+          <p className="text-gray-400 text-sm mb-2">This is a custom project description.</p>
+          <a href="https://github.com/Yadu0/custom-project" className="text-blue-400 text-sm hover:underline">
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      {/* 🔻 Add GitHub auto-fetching projects here */}
+      <h2 className="text-white text-2xl font-semibold mt-12 mb-4">GitHub Repositories</h2>
+      <GitHubProjects />
+    </section>
+  );
+};
+
+export default Projects;
+
 
 const TECH_ICONS = {
   React: Globe,
