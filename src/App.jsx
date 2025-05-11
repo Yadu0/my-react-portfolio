@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar";
 import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
 import WelcomeScreen from "./Pages/WelcomeScreen";
-import ProjectDetails from "./components/ProjectDetails"; // Import once
+import ProjectDetails from './components/ProjectDetails'; // ✅ This must match the file path and name
+ // Import once
 import Projects from "./Pages/Projects";
 import { AnimatePresence } from 'framer-motion';
 
