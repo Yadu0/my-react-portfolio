@@ -5,7 +5,7 @@ const GitHubProjects = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/YOUR_USERNAME/repos")
+    fetch("https://api.github.com/users/Yadu0/repos")
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(repo => !repo.fork);
