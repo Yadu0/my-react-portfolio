@@ -46,6 +46,12 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
     </>
   );
 };
+// Assuming you define project data in your App.jsx or another appropriate file
+const projects = [
+  { id: 1, name: 'Diseases Detection App on Xcode' },
+  { id: 2, name: 'Women Safety AI App' },
+  { id: 3, name: 'Flutter Design' },
+];
 
 const ProjectPageLayout = () => (
   <>
