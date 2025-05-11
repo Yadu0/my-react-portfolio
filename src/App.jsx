@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Keep this import only once
 import "./index.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -7,9 +7,9 @@ import AnimatedBackground from "./components/Background";
 import Navbar from "./components/Navbar";
 import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
-import ProjectDetails from "./components/ProjectDetail";
-import Projects from "./Pages/Projects"; // Import the new Projects page
 import WelcomeScreen from "./Pages/WelcomeScreen";
+import ProjectDetails from "./components/ProjectDetails"; // Import once
+import Projects from "./Pages/Projects";
 import { AnimatePresence } from 'framer-motion';
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
@@ -46,51 +46,16 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
     </>
   );
 };
-// Assuming you define project data in your App.jsx or another appropriate file
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ProjectDetails from './components/ProjectDetails'; // Import your ProjectDetails component
 
 const App = () => {
+  const [showWelcome, setShowWelcome] = useState(true);
+
   // Define the projects data
   const projects = [
-    { id: 1, name: 'Diseases Detection App on Xcode' },
-    { id: 2, name: 'Women Safety AI App' },
-    { id: 3, name: 'Flutter Design' },
+    { id: 1, name: 'Diseases Detection App on Xcode', description: 'This project detects diseases using AI.' },
+    { id: 2, name: 'Women Safety AI App', description: 'An app aimed to ensure women’s safety through AI.' },
+    { id: 3, name: 'Flutter Design', description: 'Designing beautiful UI with Flutter.' },
   ];
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        {/* Other Routes */}
-        <Route path="/project/:id" element={<ProjectDetails projects={projects} />} />  {/* Pass projects array here */}
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
-export default App;
-
-const ProjectPageLayout = () => (
-  <>
-    <ProjectDetails />
-    <footer>
-      <center>
-        <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
-        <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
-          © 2023{" "}
-          <a href="https://flowbite.com/" className="hover:underline">
-           Yadu™
-          </a>
-          . All Rights Reserved.
-        </span>
-      </center>
-    </footer>
-  </>
-);
-
-function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
 
   return (
     <BrowserRouter>
@@ -99,11 +64,14 @@ function App() {
           path="/"
           element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />}
         />
-        <Route path="/projects" element={<Projects />} /> {/* Add the Projects route here */}
-        <Route path="/project/:id" element={<ProjectPageLayout />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route
+          path="/project/:id"
+          element={<ProjectDetails projects={projects} />} // Pass projects here
+        />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
-export default App;
+export default App; // Export App only once
