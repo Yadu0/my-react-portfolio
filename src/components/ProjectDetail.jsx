@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHubProjects from '../components/GitHubProjects';
-import ProjectDetails from './ProjectDetails'; // Ensure this import is correct
+import ProjectDetails from './Pages/ProjectDetails';
+ // Ensure this import is correct
 
 const Projects = () => {
   const demoProjects = [
