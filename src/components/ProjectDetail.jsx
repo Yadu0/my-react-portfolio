@@ -44,6 +44,12 @@ const Projects = () => {
       <GitHubProjects />
     </section>
   );
+
+const ProjectDetails = () => {
+  // your logic
 };
+
+export default ProjectDetails;
+
 
 export default Projects;
