@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
+import Projects from "./Pages/Projects"; // Import the new Projects page
 import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
 
@@ -70,7 +71,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
+        <Route
+          path="/"
+          element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />}
+        />
+        <Route path="/projects" element={<Projects />} /> {/* Add the Projects route here */}
         <Route path="/project/:id" element={<ProjectPageLayout />} />
       </Routes>
     </BrowserRouter>
