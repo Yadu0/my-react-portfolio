@@ -91,7 +91,7 @@ const Navbar = () => {
               onClick={(e) => scrollToSection(e, "#Home")}
               className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
             >
-              MyLogo {/* Add your logo text or image here */}
+              YADU JAIN {/* Add your logo text or image here */}
             </a>
           </div>
 
